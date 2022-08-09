@@ -22,12 +22,13 @@
                 }
                 else
                 {
-                    //a foreach loop to color every other start red
+                    //a foreach loop to color every other star red
                     sequence = 0;
                     Console.Write($"{spaces}");
+                    int starvalue = 0;
                     foreach (char star in stars)
                     {
-                        if (sequence == 0 | sequence == 2 | sequence == 4 | sequence == 6 | sequence == 8 | sequence == 10 | sequence == 12| sequence == 14)
+                        if (starvalue %2 == 0)
                         {
                             Console.ForegroundColor = ConsoleColor.Green;
                             Console.Write("*");
@@ -39,7 +40,7 @@
                             Console.Write("*");
                             Console.ResetColor();
                         }
-                        sequence++;
+                        starvalue++;
                     }
                     Console.Write($"{spaces}\r\n");
                 }
